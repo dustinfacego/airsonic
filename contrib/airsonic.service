@@ -9,7 +9,7 @@ Environment="JAVA_JAR=/var/airsonic/airsonic.war"
 Environment="JAVA_OPTS=-Xmx700m"
 Environment="AIRSONIC_HOME=/var/airsonic"
 Environment="PORT=8080"
-Environment="CONTEXT_PATH=/airsonic"
+Environment="CONTEXT_PATH=/"
 Environment="JAVA_ARGS="
 EnvironmentFile=-/etc/sysconfig/airsonic
 ExecStart=/usr/bin/java \
@@ -44,7 +44,7 @@ ReadWritePaths=/var/airsonic
 # You can change the following line to `strict` instead of `full`
 # if you don't want airsonic to be able to
 # write anything on your filesystem outside of AIRSONIC_HOME.
-ProtectSystem=full
+ProtectSystem=strict
 
 # You can uncomment the following line if you don't have any media
 # in /home/…. This will prevent airsonic from ever reading/writing anything there.
